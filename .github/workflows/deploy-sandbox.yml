@@ -34,8 +34,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: CDK Bootstrap (first time only; safe to re-run)
-        run: npx cdk bootstrap
-
       - name: Deploy
         run: npx cdk deploy --require-approval never
