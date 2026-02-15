@@ -10,7 +10,6 @@ RUN if [ -f package-lock.json ]; then npm ci; else npm install --package-lock-on
 # CDK CLI (v2)
 RUN npm i -g aws-cdk@2
 
-# AWS CLI + pager + tools
 RUN apt-get update && \
     apt-get install -y awscli less ca-certificates && \
     rm -rf /var/lib/apt/lists/*
